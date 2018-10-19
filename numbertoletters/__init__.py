@@ -103,7 +103,7 @@ def number_to_letters(number):
         elif converted.endswith('ún '):
             converted = converted.replace('ún ', ' uno ')
         decimals = number_to_letters(decimals)
-        converted += 'con {}'.format(decimals)
+        converted += 'amb {}'.format(decimals)
     if negative:
         converted = 'menos {}'.format(converted)
     return converted.strip()
@@ -126,10 +126,9 @@ def __convert_number(n):
         decenas = DECENAS[int(n[1]) - 2]
         unidades = UNIDADES[int(n[2])]
 
-        if decenas == 'veinti' and unidades in UNIDADES_TILDES:
-            unidades = UNIDADES_TILDES[unidades]
-
-        if (k > 30) & (n[2] != '0'):
+        if decenas == 'vint':
+            output += '{}-i-{}'.format(decenas, unidades)
+        elif (k > 30) & (n[2] != '0'):
             output += '{}-{}'.format(decenas, unidades)
         else:
             output += '{}{}'.format(decenas, unidades)
