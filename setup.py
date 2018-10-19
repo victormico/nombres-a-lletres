@@ -8,7 +8,7 @@ setup(
     author='AxiaCore, oriolpiera',
     author_email='oriol.piera@somenergia.coop',
     license='MIT',
-    packages=['nombresalletres'],
+    packages=['nombrestolletres'],
     zip_safe=False,
     test_suite='tests',
 )
