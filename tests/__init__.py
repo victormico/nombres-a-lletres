@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from numbertoletters import number_to_letters
+from nombrestolletres import number_to_letters
 
 
 class TestToWord(unittest.TestCase):
@@ -23,7 +23,7 @@ class TestToWord(unittest.TestCase):
             203.01,
             #21.1,
             #0.24,
-            #0.00,
+            0.00,
             #-230.5,
             #'2959163',
             #'1000000',
@@ -46,7 +46,7 @@ class TestToWord(unittest.TestCase):
             'dos-cents tres amb un',
             #'veinti uno con diez',
             #'cero con veinticuatro',
-            #'cero',
+            'zero',
             #'menos doscientos treinta con cincuenta',
             #'dos millones novecientos cincuenta y nueve mil ciento sesenta y '
             #'tres',

@@ -95,7 +95,7 @@ def number_to_letters(number):
         elif int(cientos) > 0:
             converted += __convert_number(cientos)
     if not number:
-        converted = 'cero '
+        converted = 'zero '
 
     if decimals:
         if converted.endswith('un '):
