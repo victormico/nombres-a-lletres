@@ -6,53 +6,49 @@ UNIDADES = (
     'un ',
     'dos ',
     'tres ',
-    'cuatro ',
-    'cinco ',
-    'seis ',
-    'siete ',
-    'ocho ',
-    'nueve ',
-    'diez ',
-    'once ',
-    'doce ',
-    'trece ',
-    'catorce ',
-    'quince ',
-    'dieciséis ',
-    'diecisiete ',
-    'dieciocho ',
-    'diecinueve ',
-    'veinte ',
+    'quatre ',
+    'cinc ',
+    'sis ',
+    'set ',
+    'vuit ',
+    'nou ',
+    'deu ',
+    'onze ',
+    'dotze ',
+    'tretze ',
+    'catorze ',
+    'quinze ',
+    'setze ',
+    'diset ',
+    'divuit ',
+    'dinou ',
+    'vint ',
 )
 
 UNIDADES_TILDES = {
-    'un ': 'ún ',
-    'dos ': 'dós ',
-    'tres ': 'trés ',
-    'seis ': 'séis ',
 }
 
 DECENAS = (
-    'veinti',
-    'treinta ',
-    'cuarenta ',
-    'cincuenta ',
-    'sesenta ',
-    'setenta ',
-    'ochenta ',
-    'noventa ',
-    'cien ',
+    'vint',
+    'trenta ',
+    'quaranta ',
+    'cinquanta ',
+    'seixanta ',
+    'setanta ',
+    'vuitanta ',
+    'noranta ',
+    'cent ',
 )
 CENTENAS = (
-    'ciento ',
-    'doscientos ',
-    'trescientos ',
-    'cuatrocientos ',
-    'quinientos ',
-    'seiscientos ',
-    'setecientos ',
-    'ochocientos ',
-    'novecientos ',
+    'cent ',
+    'dos-cents ',
+    'tres-cents ',
+    'quatre-cents ',
+    'cinc-cents ',
+    'sis-cents ',
+    'set-cents ',
+    'vuit-cents ',
+    'nou-cents ',
 )
 
 
@@ -65,7 +61,7 @@ def number_to_letters(number):
         try:
             number = float(number)
         except ValueError:
-            raise Exception('El valor ingresado es invalido')
+            raise Exception('El valor ingressat es invàlid')
     number, decimals = ('%.2f' % number).split('.')
 
     number = int(number)
@@ -74,7 +70,7 @@ def number_to_letters(number):
     if negative:
         number = abs(number)
     if not (0 <= number < 999999999):
-        return 'No es posible convertir el numero a letras'
+        return 'No es possible convertir el número a lletres'
 
     number_str = str(number).zfill(9)
     millones = number_str[:3]
@@ -83,9 +79,9 @@ def number_to_letters(number):
 
     if millones:
         if millones == '001':
-            converted += 'un millón '
+            converted += 'un milió '
         elif int(millones) > 0:
-            converted += '{}millones '.format(__convert_number(millones))
+            converted += '{}milions '.format(__convert_number(millones))
 
     if miles:
         if miles == '001':
@@ -119,7 +115,7 @@ def __convert_number(n):
     output = ''
 
     if n == '100':
-        output = 'cien '
+        output = 'cent '
     elif n[0] != '0':
         output = CENTENAS[int(n[0]) - 1]
 
