@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # Author: AxiaCore S.A.S. http://axiacore.com
-UNIDADES = (
+UNITATS = (
     '',
     'un ',
     'dos ',
@@ -24,11 +24,7 @@ UNIDADES = (
     'dinou ',
     'vint ',
 )
-
-UNIDADES_TILDES = {
-}
-
-DECENAS = (
+DESENES = (
     'vint',
     'trenta',
     'quaranta',
@@ -39,7 +35,7 @@ DECENAS = (
     'noranta',
     'cent ',
 )
-CENTENAS = (
+CENTENES = (
     'cent ',
     'dos-cents ',
     'tres-cents ',
@@ -113,19 +109,17 @@ def __convert_number(n):
     """Max length must be 3 digits
     """
     output = ''
-    print n
     if n == '100':
         output = 'cent '
     elif n[0] != '0':
-        output = CENTENAS[int(n[0]) - 1]
+        output = CENTENES[int(n[0]) - 1]
 
     k = int(n[1:])
     if k <= 20:
-        output += UNIDADES[k]
+        output += UNITATS[k]
     else:
-        decenas = DECENAS[int(n[1]) - 2]
-        print decenas
-        unidades = UNIDADES[int(n[2])]
+        decenas = DESENES[int(n[1]) - 2]
+        unidades = UNITATS[int(n[2])]
 
         if decenas == 'vint':
             output += '{}-i-{}'.format(decenas, unidades)
