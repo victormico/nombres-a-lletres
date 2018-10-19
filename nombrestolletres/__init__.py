@@ -113,7 +113,7 @@ def __convert_number(n):
     """Max length must be 3 digits
     """
     output = ''
-
+    print n
     if n == '100':
         output = 'cent '
     elif n[0] != '0':
@@ -124,6 +124,7 @@ def __convert_number(n):
         output += UNIDADES[k]
     else:
         decenas = DECENAS[int(n[1]) - 2]
+        print decenas
         unidades = UNIDADES[int(n[2])]
 
         if decenas == 'vint':
