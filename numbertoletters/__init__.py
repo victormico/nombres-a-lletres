@@ -30,13 +30,13 @@ UNIDADES_TILDES = {
 
 DECENAS = (
     'vint',
-    'trenta ',
-    'quaranta ',
-    'cinquanta ',
-    'seixanta ',
-    'setanta ',
-    'vuitanta ',
-    'noranta ',
+    'trenta',
+    'quaranta',
+    'cinquanta',
+    'seixanta',
+    'setanta',
+    'vuitanta',
+    'noranta',
     'cent ',
 )
 CENTENAS = (
@@ -130,7 +130,7 @@ def __convert_number(n):
             unidades = UNIDADES_TILDES[unidades]
 
         if (k > 30) & (n[2] != '0'):
-            output += '{}y {}'.format(decenas, unidades)
+            output += '{}-{}'.format(decenas, unidades)
         else:
             output += '{}{}'.format(decenas, unidades)
 
