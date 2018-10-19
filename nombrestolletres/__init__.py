@@ -94,10 +94,6 @@ def number_to_letters(number):
         converted = 'zero '
 
     if decimals:
-        if converted.endswith('un '):
-            converted = converted.replace('un ', ' uno ')
-        elif converted.endswith('ún '):
-            converted = converted.replace('ún ', ' uno ')
         decimals = number_to_letters(decimals)
         converted += 'amb {}'.format(decimals)
     if negative:
