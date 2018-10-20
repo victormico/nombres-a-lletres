@@ -22,12 +22,12 @@ class TestToWord(unittest.TestCase):
             826.02,
             203.01,
             21.1,
-            #0.24,
+            0.24,
             0.00,
-            -230.5,
-            #'2959163',
-            #'1000000',
-            #'150000',
+            -230.500,
+            '2959163',
+            '1000000',
+            '150000',
         ]
 
         results = [
@@ -45,14 +45,12 @@ class TestToWord(unittest.TestCase):
             'vuit-cents vint-i-sis amb dos',
             'dos-cents tres amb un',
             'vint-i-un amb deu',
-            #'cero con veinticuatro',
+            'zero amb vint-i-quatre',
             'zero',
             'menys dos-cents trenta amb cinquanta',
-            #'menos doscientos treinta con cincuenta',
-            #'dos millones novecientos cincuenta y nueve mil ciento sesenta y '
-            #'tres',
-            #'un millón',
-            #'ciento cincuenta mil',
+            'dos milions nou-cents cinquanta-nou mil cent seixanta-tres',
+            'un milió',
+            'cent cinquanta mil',
         ]
 
         for result, number in zip(results, numbers):
