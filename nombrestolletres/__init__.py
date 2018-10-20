@@ -97,7 +97,7 @@ def number_to_letters(number):
         decimals = number_to_letters(decimals)
         converted += 'amb {}'.format(decimals)
     if negative:
-        converted = 'menos {}'.format(converted)
+        converted = 'menys {}'.format(converted)
     return converted.strip()
 
 
@@ -114,13 +114,13 @@ def __convert_number(n):
     if k <= 20:
         output += UNITATS[k]
     else:
-        decenas = DESENES[int(n[1]) - 2]
+        decenas = DESENES[int(n[1]) - 2] + ' '
         unidades = UNITATS[int(n[2])]
 
-        if decenas == 'vint':
-            output += '{}-i-{}'.format(decenas, unidades)
+        if decenas == 'vint ':
+            output += '{}-i-{}'.format(decenas.strip(), unidades)
         elif (k > 30) & (n[2] != '0'):
-            output += '{}-{}'.format(decenas, unidades)
+            output += '{}-{}'.format(decenas.strip(), unidades)
         else:
             output += '{}{}'.format(decenas, unidades)
 

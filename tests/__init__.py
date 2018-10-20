@@ -24,7 +24,7 @@ class TestToWord(unittest.TestCase):
             21.1,
             #0.24,
             0.00,
-            #-230.5,
+            -230.5,
             #'2959163',
             #'1000000',
             #'150000',
@@ -47,6 +47,7 @@ class TestToWord(unittest.TestCase):
             'vint-i-un amb deu',
             #'cero con veinticuatro',
             'zero',
+            'menys dos-cents trenta amb cinquanta',
             #'menos doscientos treinta con cincuenta',
             #'dos millones novecientos cincuenta y nueve mil ciento sesenta y '
             #'tres',
