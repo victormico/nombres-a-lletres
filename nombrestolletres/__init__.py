@@ -19,7 +19,7 @@ UNITATS = (
     'catorze ',
     'quinze ',
     'setze ',
-    'diset ',
+    'disset ',
     'divuit ',
     'dinou ',
     'vint ',
