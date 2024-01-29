@@ -5,9 +5,9 @@ A python library to convert numbers to their catalan text representation. Decima
 
 ### Quick start 
 
-Install it using [pip](https://pypi.python.org/pypi/pip):
+Install it using [pip](https://pypi.org/project/nombresalletres):
 
-    pip install nombrestolletres
+    pip install nombresalletres
 
 ### Usage
 
